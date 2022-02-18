@@ -13,7 +13,7 @@ export default function Product(props){
       <div style={{color:"black",display:"flex",justifyContent:"center", alignItems:"center"}}>
           <Rating rating={props.p[0].rating.rate}/>
           <h3 style={{margin:"10px",color:"green"}}>Add To Cart---</h3>
-         <button style={{border:"none",backgroundColor:"white"}} onClick={()=>{localStorage.setItem("cartData",props.p[0])}}><h1><i class="fa-solid fa-cart-arrow-down"></i></h1></button> 
+         <button style={{border:"none",backgroundColor:"white"}} onClick={()=>{localStorage.setItem("cartData",JSON.stringify(props.p))}}><h1><i class="fa-solid fa-cart-arrow-down"></i></h1></button> 
      </div>
       
       <h5 style={{color:"black", backgroundColor:"#f0e595",padding:"10px"}}>{props.p[0].description}</h5>
